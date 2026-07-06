@@ -8,17 +8,27 @@ import {
   MapPin,
 } from 'lucide-react'
 import { Header } from './components/Header'
+import { HeroCanvas } from './components/HeroCanvas'
+import { Magnetic } from './components/Magnetic'
+import { Marquee } from './components/Marquee'
+import { ScrambleText } from './components/ScrambleText'
+import { ScrollProgress } from './components/ScrollProgress'
 import { SectionHeading } from './components/SectionHeading'
+import { Spotlight } from './components/Spotlight'
+import { TiltCard } from './components/TiltCard'
 import { portfolio } from './data/portfolio'
 
 function App() {
   return (
     <div id="top">
       <a className="skip-link" href="#main">Skip to main content</a>
+      <ScrollProgress />
+      <Spotlight />
       <Header />
 
       <main id="main">
         <section className="hero container" aria-labelledby="hero-title">
+          <HeroCanvas />
           <div className="hero-glow" aria-hidden="true" />
           <p className="availability reveal">
             <span aria-hidden="true" /> {portfolio.availability}
@@ -26,20 +36,29 @@ function App() {
           <h1 id="hero-title" className="reveal delay-1">
             Frontend experiences built with <span>care and clarity.</span>
           </h1>
+          <p className="hero-tagline reveal delay-2">
+            <ScrambleText text={`> ${portfolio.role} — building for the web`} delay={700} />
+          </p>
           <p className="hero-copy reveal delay-2">{portfolio.intro}</p>
           <div className="hero-actions reveal delay-3">
-            <a className="button primary" href="#projects">
-              Explore my work <ArrowDown size={17} aria-hidden="true" />
-            </a>
-            <a className="button secondary" href={`mailto:${portfolio.email}`}>
-              Start a conversation <ArrowUpRight size={17} aria-hidden="true" />
-            </a>
+            <Magnetic>
+              <a className="button primary" href="#projects">
+                Explore my work <ArrowDown size={17} aria-hidden="true" />
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a className="button secondary" href={`mailto:${portfolio.email}`}>
+                Start a conversation <ArrowUpRight size={17} aria-hidden="true" />
+              </a>
+            </Magnetic>
           </div>
           <div className="hero-meta reveal delay-3" aria-label="Profile summary">
             <span><MapPin size={15} aria-hidden="true" /> {portfolio.location}</span>
             <span>{portfolio.role}</span>
           </div>
         </section>
+
+        <Marquee />
 
         <section id="about" className="section container split-section" aria-labelledby="about-title">
           <SectionHeading id="about-title" eyebrow="01 / About" title="Engineering thoughtful interfaces." />
@@ -99,7 +118,8 @@ function App() {
           <SectionHeading id="projects-title" eyebrow="05 / Work" title="Selected project." />
           <div className="project-grid">
             {portfolio.projects.map((project) => (
-              <article className="project-card reveal" key={project.title}>
+              <TiltCard className="reveal" key={project.title}>
+              <article className="project-card">
                 <div className="project-topline">
                   <span>{project.label}</span>
                   <span>2026</span>
@@ -127,6 +147,7 @@ function App() {
                   </div>
                 </div>
               </article>
+              </TiltCard>
             ))}
           </div>
         </section>
@@ -136,12 +157,16 @@ function App() {
           <h2 id="contact-title" className="reveal">Let’s build something useful.</h2>
           <p className="reveal">I’m open to frontend opportunities and conversations about thoughtful web products.</p>
           <div className="contact-actions reveal">
-            <a className="button primary" href={`mailto:${portfolio.email}`}>
-              <Mail size={18} aria-hidden="true" /> Email me
-            </a>
-            <a className="button secondary" href={portfolio.links.github} target="_blank" rel="noreferrer">
-              <GitBranch size={18} aria-hidden="true" /> View GitHub <span className="sr-only">(opens in a new tab)</span>
-            </a>
+            <Magnetic>
+              <a className="button primary" href={`mailto:${portfolio.email}`}>
+                <Mail size={18} aria-hidden="true" /> Email me
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a className="button secondary" href={portfolio.links.github} target="_blank" rel="noreferrer">
+                <GitBranch size={18} aria-hidden="true" /> View GitHub <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            </Magnetic>
           </div>
           <a className="contact-email reveal" href={`mailto:${portfolio.email}`}>{portfolio.email}</a>
         </section>
