@@ -1,161 +1,37 @@
-import {
-  ArrowDown,
-  ArrowUpRight,
-  Check,
-  Code2,
-  GitBranch,
-  Mail,
-  MapPin,
-} from 'lucide-react'
+import { ArrowDown, ArrowUpRight, Award, Check, Cpu, GitBranch, Link, Mail, MapPin, Phone } from 'lucide-react'
 import { Header } from './components/Header'
 import { SectionHeading } from './components/SectionHeading'
 import { portfolio } from './data/portfolio'
 
 function App() {
-  return (
-    <div id="top">
-      <a className="skip-link" href="#main">Skip to main content</a>
-      <Header />
-
-      <main id="main">
-        <section className="hero container" aria-labelledby="hero-title">
-          <div className="hero-glow" aria-hidden="true" />
-          <p className="availability reveal">
-            <span aria-hidden="true" /> {portfolio.availability}
-          </p>
-          <h1 id="hero-title" className="reveal delay-1">
-            Frontend experiences built with <span>care and clarity.</span>
-          </h1>
+  return <div id="top">
+    <a className="skip-link" href="#main">Skip to main content</a><Header />
+    <main id="main">
+      <section className="hero container" aria-labelledby="hero-title">
+        <div className="hero-copy-wrap">
+          <p className="availability reveal"><span aria-hidden="true" />{portfolio.availability}</p>
+          <p className="hero-kicker reveal">Hello, I’m {portfolio.preferredName}.</p>
+          <h1 id="hero-title" className="reveal delay-1">Building smarter systems, <span>one circuit at a time.</span></h1>
           <p className="hero-copy reveal delay-2">{portfolio.intro}</p>
-          <div className="hero-actions reveal delay-3">
-            <a className="button primary" href="#projects">
-              Explore my work <ArrowDown size={17} aria-hidden="true" />
-            </a>
-            <a className="button secondary" href={`mailto:${portfolio.email}`}>
-              Start a conversation <ArrowUpRight size={17} aria-hidden="true" />
-            </a>
-          </div>
-          <div className="hero-meta reveal delay-3" aria-label="Profile summary">
-            <span><MapPin size={15} aria-hidden="true" /> {portfolio.location}</span>
-            <span>{portfolio.role}</span>
-          </div>
-        </section>
-
-        <section id="about" className="section container split-section" aria-labelledby="about-title">
-          <SectionHeading id="about-title" eyebrow="01 / About" title="Engineering thoughtful interfaces." />
-          <div className="body-copy reveal">
-            {portfolio.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          </div>
-        </section>
-
-        <section id="skills" className="section container split-section" aria-labelledby="skills-title">
-          <SectionHeading id="skills-title" eyebrow="02 / Capabilities" title="A focused frontend toolkit." />
-          <div className="skill-groups reveal">
-            {portfolio.skillGroups.map((group) => (
-              <div className="skill-group" key={group.label}>
-                <h3>{group.label}</h3>
-                <ul aria-label={`${group.label} skills`}>
-                  {group.skills.map((skill) => <li key={skill}>{skill}</li>)}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="experience" className="section container" aria-labelledby="experience-title">
-          <SectionHeading id="experience-title" eyebrow="03 / Experience" title="Learning by shipping." />
-          <div className="timeline">
-            {portfolio.experience.map((item) => (
-              <article className="timeline-item reveal" key={item.organization}>
-                <p className="period">{item.period}</p>
-                <div>
-                  <h3>{item.role}</h3>
-                  <p className="company">{item.organization}</p>
-                </div>
-                <div>
-                  <p>{item.description}</p>
-                  <ul className="achievement-list">
-                    {item.achievements.map((achievement) => (
-                      <li key={achievement}><Check size={15} aria-hidden="true" />{achievement}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="education" className="section container split-section" aria-labelledby="education-title">
-          <SectionHeading id="education-title" eyebrow="04 / Education" title="Continuous, practical learning." />
-          <article className="education-card reveal">
-            <p className="period">{portfolio.education.period}</p>
-            <h3>{portfolio.education.program}</h3>
-            <p className="education-provider">{portfolio.education.provider}</p>
-            <p>{portfolio.education.description}</p>
-          </article>
-        </section>
-
-        <section id="projects" className="section container" aria-labelledby="projects-title">
-          <SectionHeading id="projects-title" eyebrow="05 / Work" title="Selected project." />
-          <div className="project-grid">
-            {portfolio.projects.map((project) => (
-              <article className="project-card reveal" key={project.title}>
-                <div className="project-topline">
-                  <span>{project.label}</span>
-                  <span>2026</span>
-                </div>
-                <div className="project-content">
-                  <div>
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <ul className="impact-list">
-                      {project.impact.map((item) => <li key={item}>{item}</li>)}
-                    </ul>
-                  </div>
-                  <div className="project-aside">
-                    <ul className="project-tags" aria-label={`${project.title} technologies`}>
-                      {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
-                    </ul>
-                    <div className="project-actions">
-                      <a className="text-link" href={project.liveUrl} target="_blank" rel="noreferrer">
-                        Live site <span className="sr-only">(opens in a new tab)</span><ArrowUpRight size={16} aria-hidden="true" />
-                      </a>
-                      <a className="text-link" href={project.sourceUrl} target="_blank" rel="noreferrer">
-                        Source code <span className="sr-only">(opens in a new tab)</span><Code2 size={16} aria-hidden="true" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="contact section container" aria-labelledby="contact-title">
-          <p className="eyebrow reveal">06 / Contact</p>
-          <h2 id="contact-title" className="reveal">Let’s build something useful.</h2>
-          <p className="reveal">I’m open to frontend opportunities and conversations about thoughtful web products.</p>
-          <div className="contact-actions reveal">
-            <a className="button primary" href={`mailto:${portfolio.email}`}>
-              <Mail size={18} aria-hidden="true" /> Email me
-            </a>
-            <a className="button secondary" href={portfolio.links.github} target="_blank" rel="noreferrer">
-              <GitBranch size={18} aria-hidden="true" /> View GitHub <span className="sr-only">(opens in a new tab)</span>
-            </a>
-          </div>
-          <a className="contact-email reveal" href={`mailto:${portfolio.email}`}>{portfolio.email}</a>
-        </section>
-      </main>
-
-      <footer className="footer">
-        <div className="container footer-inner">
-          <p>© {new Date().getFullYear()} {portfolio.name}</p>
-          <p>Designed and built with React + TypeScript</p>
-          <a href="#top">Back to top <ArrowUpRight size={14} aria-hidden="true" /></a>
+          <div className="hero-actions reveal delay-3"><a className="button primary" href="#projects">Explore my projects <ArrowDown size={17}/></a><a className="button secondary" href={`mailto:${portfolio.email}`}>Contact me <ArrowUpRight size={17}/></a></div>
+          <div className="hero-meta reveal"><span><MapPin size={15}/>{portfolio.location}</span><span><Cpu size={15}/>{portfolio.role} @ CUSAT</span></div>
         </div>
-      </footer>
-    </div>
-  )
-}
+        <figure className="portrait reveal"><div className="portrait-frame"><img src={portfolio.profileImage} alt="Muhammed Salman CC" /></div><figcaption><span>Focus / 2026</span><strong>Embedded · FPGA · IoT</strong></figcaption></figure>
+      </section>
 
+      <section id="about" className="section container split-section" aria-labelledby="about-title"><SectionHeading id="about-title" eyebrow="01 / Profile" title="Electronics first. Always curious."/><div className="body-copy reveal">{portfolio.about.map(p=><p key={p}>{p}</p>)}<div className="interest-strip"><span>Research interests</span><p>Embedded AI · Robotics · Edge AI · Computer Vision · Hardware Acceleration · Automation</p></div></div></section>
+
+      <section id="skills" className="section container split-section" aria-labelledby="skills-title"><SectionHeading id="skills-title" eyebrow="02 / Technical Stack" title="Hardware-minded, software-capable."/><div className="skill-groups reveal">{portfolio.skillGroups.map(g=><div className="skill-group" key={g.label}><h3>{g.label}</h3><ul>{g.skills.map(s=><li key={s}>{s}</li>)}</ul></div>)}</div></section>
+
+      <section id="projects" className="section container" aria-labelledby="projects-title"><SectionHeading id="projects-title" eyebrow="03 / Selected Work" title="Systems built for the real world."/><div className="project-grid">{portfolio.projects.map((p,i)=><article className={`project-card reveal ${i===0?'featured':''}`} key={p.title}>{p.image&&<div className="project-image"><img src={p.image} alt={`${p.title} project`} /></div>}<div className="project-content"><div className="project-topline"><span>{p.label}</span>{p.badge&&<strong><Award size={14}/>{p.badge}</strong>}</div><h3>{p.title}</h3><p>{p.description}</p><ul className="impact-list">{p.impact.map(x=><li key={x}><Check size={14}/>{x}</li>)}</ul><ul className="project-tags">{p.tags.map(t=><li key={t}>{t}</li>)}</ul></div></article>)}</div></section>
+
+      <section id="experience" className="section container" aria-labelledby="experience-title"><SectionHeading id="experience-title" eyebrow="04 / Experience" title="Learning through engineering."/><div className="timeline"><article className="timeline-item reveal"><p className="period">2 months · Online</p><div><h3>IoT Intern</h3><p className="company">Sparkiit</p></div><div><p>Hands-on development with ESP32, NodeMCU, embedded programming, sensor interfacing, and IoT communication.</p></div></article><article className="timeline-item reveal"><p className="period">Research seminar</p><div><h3>FPGA-Based Vision Processing</h3><p className="company">For Autonomous Robots</p></div><div><p>Exploring FPGA architecture, computer vision, robotics, hardware acceleration, and autonomous systems.</p></div></article><article className="timeline-item reveal"><p className="period">Founder · Present</p><div><h3>Content Creator</h3><p className="company">AiCoN Tech Hub</p></div><div><p>Creating accessible educational content about AI, Linux, programming, cybersecurity, open source, and developer tools.</p></div></article></div></section>
+
+      <section id="education" className="section container split-section" aria-labelledby="education-title"><SectionHeading id="education-title" eyebrow="05 / Education" title="A foundation in electronics."/><div className="education-list">{portfolio.education.map(e=><article className="education-card reveal" key={e.program}>{e.logo&&<img src={e.logo} alt="CUSAT logo"/>}<div><p className="period">{e.period}</p><h3>{e.program}</h3><p className="education-provider">{e.provider}</p><p>{e.detail}</p></div></article>)}</div></section>
+
+      <section id="contact" className="contact section container" aria-labelledby="contact-title"><p className="eyebrow reveal">06 / Contact</p><h2 id="contact-title" className="reveal">Let’s engineer something <span>meaningful.</span></h2><p className="reveal">Open to embedded systems opportunities, technical collaborations, and research conversations.</p><div className="contact-actions reveal"><a className="button primary" href={`mailto:${portfolio.email}`}><Mail size={18}/>Email me</a><a className="button secondary" href={portfolio.links.linkedin} target="_blank" rel="noreferrer"><Link size={18}/>LinkedIn</a><a className="button secondary" href={portfolio.links.github} target="_blank" rel="noreferrer"><GitBranch size={18}/>GitHub</a></div><div className="contact-details"><a href={`mailto:${portfolio.universityEmail}`}>{portfolio.universityEmail}</a><a href="tel:+919746707833"><Phone size={14}/>{portfolio.phone}</a></div></section>
+    </main>
+    <footer className="footer"><div className="container footer-inner"><p>© {new Date().getFullYear()} {portfolio.name}</p><p>Electronics · Embedded Systems · Open Source</p><a href="#top">Back to top <ArrowUpRight size={14}/></a></div></footer>
+  </div>
+}
 export default App
