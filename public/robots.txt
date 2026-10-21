@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://muhammedsalmancc.netlify.app/sitemap.xml
+Sitemap: https://muhammed-salman-cc.is-a.dev/sitemap.xml

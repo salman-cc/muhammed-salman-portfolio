@@ -1,14 +1,21 @@
 type SectionHeadingProps = {
   id?: string
-  eyebrow: string
+  index: string
+  label: string
   title: string
+  lede?: string
 }
 
-export function SectionHeading({ id, eyebrow, title }: SectionHeadingProps) {
+export function SectionHeading({ id, index, label, title, lede }: SectionHeadingProps) {
   return (
-    <div className="section-heading reveal">
-      <p className="eyebrow">{eyebrow}</p>
+    <header className="section-heading reveal">
+      <p className="eyebrow">
+        <span className="eyebrow-index">{index}</span>
+        <span className="eyebrow-rule" aria-hidden="true" />
+        <span>{label}</span>
+      </p>
       <h2 id={id}>{title}</h2>
-    </div>
+      {lede ? <p className="section-lede">{lede}</p> : null}
+    </header>
   )
 }
