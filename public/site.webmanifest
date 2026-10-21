@@ -1,11 +1,11 @@
 {
-  "name": "Muhammed Salman CC — Frontend Developer",
+  "name": "Muhammed Salman CC — Embedded Systems & Electronics",
   "short_name": "Salman",
-  "description": "Frontend developer portfolio for Muhammed Salman CC.",
+  "description": "Portfolio of Muhammed Salman CC, an electronics student building embedded systems, FPGA designs, IoT devices, and intelligent hardware.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#08090c",
-  "theme_color": "#08090c",
+  "background_color": "#080b0a",
+  "theme_color": "#080b0a",
   "icons": [
     {
       "src": "/favicon.svg",

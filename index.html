@@ -3,8 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#08090c" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#080b0a" />
+    <meta name="color-scheme" content="dark light" />
+    <script>
+      ;(() => {
+        const root = document.documentElement
+        let theme = 'dark'
+        try {
+          const stored = window.localStorage.getItem('mss-theme')
+          if (stored === 'light' || stored === 'dark') {
+            theme = stored
+          }
+        } catch {
+          theme = 'dark'
+        }
+        root.dataset.theme = theme
+        root.style.colorScheme = theme
+      })()
+    </script>
+    <style>
+      html {
+        background: #080b0a;
+      }
+      html[data-theme='light'] {
+        background: #f2f1ea;
+      }
+    </style>
     <meta name="description" content="Muhammed Salman CC is an M.Sc. Electronics student focused on embedded systems, IoT, FPGA design, robotics, Embedded Linux, and intelligent hardware." />
     <meta name="author" content="Muhammed Salman CC" />
     <meta name="robots" content="index, follow, max-image-preview:large" />

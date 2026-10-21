@@ -1,21 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(230 80) rotate(42) scale(620 500)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7563ee" stop-opacity=".42"/>
-      <stop offset="1" stop-color="#08090c" stop-opacity="0"/>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(980 40) rotate(125) scale(760 620)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c9f76f" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#080b0a" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="line" x1="80" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#9b8cff"/>
-      <stop offset="1" stop-color="#66d9d0"/>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientTransform="translate(60 620) rotate(-40) scale(540 420)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#69e0a8" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#080b0a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#c9f76f" fill-opacity="0.10"/>
+    </pattern>
+    <linearGradient id="rule" x1="80" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c9f76f" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#c9f76f" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="#08090c"/>
+
+  <rect width="1200" height="630" fill="#080b0a"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
-  <path d="M80 100h1040" stroke="url(#line)" stroke-width="3"/>
-  <rect x="80" y="148" width="64" height="64" rx="14" fill="#151820" stroke="#ffffff" stroke-opacity=".16"/>
-  <text x="112" y="190" text-anchor="middle" fill="#f5f7fb" font-family="Arial, sans-serif" font-size="23" font-weight="700">MS</text>
-  <text x="80" y="336" fill="#f5f7fb" font-family="Arial, sans-serif" font-size="76" font-weight="600" letter-spacing="-2">Muhammed Salman CC</text>
-  <text x="80" y="406" fill="#c9c1ff" font-family="Arial, sans-serif" font-size="36">Frontend Developer</text>
-  <text x="80" y="505" fill="#a5acb9" font-family="Arial, sans-serif" font-size="26">React · TypeScript · Accessible web interfaces</text>
-  <text x="1120" y="560" text-anchor="end" fill="#737b8a" font-family="Arial, sans-serif" font-size="20">muhammedsalmancc.netlify.app</text>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- top rule + monogram -->
+  <path d="M80 92h1040" stroke="url(#rule)" stroke-width="2"/>
+  <rect x="80" y="124" width="60" height="60" rx="16" fill="#c9f76f"/>
+  <text x="110" y="163" text-anchor="middle" fill="#0b1206" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="-0.5">MS</text>
+  <text x="80" y="228" fill="#cdf87a" font-family="Consolas, 'Courier New', monospace" font-size="15" letter-spacing="3">EMBEDDED SYSTEMS · FPGA · IoT</text>
+
+  <!-- headline -->
+  <text x="80" y="330" fill="#f0f5f1" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="600" letter-spacing="-2.6">Muhammed Salman CC</text>
+  <text x="80" y="404" fill="#a9b8b0" font-family="Arial, Helvetica, sans-serif" font-size="31" letter-spacing="-0.4">Electronics student building intelligent systems</text>
+  <text x="80" y="446" fill="#a9b8b0" font-family="Arial, Helvetica, sans-serif" font-size="31" letter-spacing="-0.4">from sensor to cloud.</text>
+
+  <!-- tags -->
+  <g font-family="Consolas, 'Courier New', monospace" font-size="17" fill="#c9f76f">
+    <rect x="80" y="492" width="132" height="40" rx="20" fill="#c9f76f" fill-opacity="0.08" stroke="#c9f76f" stroke-opacity="0.35"/>
+    <text x="104" y="518">Embedded C</text>
+    <rect x="224" y="492" width="106" height="40" rx="20" fill="#c9f76f" fill-opacity="0.08" stroke="#c9f76f" stroke-opacity="0.35"/>
+    <text x="248" y="518">Verilog</text>
+    <rect x="342" y="492" width="106" height="40" rx="20" fill="#c9f76f" fill-opacity="0.08" stroke="#c9f76f" stroke-opacity="0.35"/>
+    <text x="366" y="518">ESP32</text>
+    <rect x="460" y="492" width="150" height="40" rx="20" fill="#c9f76f" fill-opacity="0.08" stroke="#c9f76f" stroke-opacity="0.35"/>
+    <text x="484" y="518">Edge AI</text>
+    <rect x="622" y="492" width="196" height="40" rx="20" fill="#c9f76f" fill-opacity="0.08" stroke="#c9f76f" stroke-opacity="0.35"/>
+    <text x="646" y="518">Embedded Linux</text>
+  </g>
+
+  <!-- schematic motif -->
+  <g stroke="#c9f76f" stroke-opacity="0.35" stroke-width="1.4" fill="none">
+    <path d="M1200 190h-96v52h-78"/>
+    <path d="M1200 300h-72v60h-64"/>
+    <path d="M1200 430h-120v-54h-54"/>
+    <circle cx="1026" cy="242" r="4" fill="#c9f76f" stroke="none"/>
+    <circle cx="1064" cy="360" r="4" fill="#c9f76f" stroke="none"/>
+    <circle cx="1026" cy="376" r="4" fill="#c9f76f" stroke="none"/>
+  </g>
+
+  <!-- footer -->
+  <path d="M80 556h1040" stroke="#ffffff" stroke-opacity="0.10"/>
+  <text x="80" y="592" fill="#8b9b92" font-family="Consolas, 'Courier New', monospace" font-size="16" letter-spacing="1">CUSAT · M.Sc. Electronics · 2027</text>
+  <text x="1120" y="592" text-anchor="end" fill="#cdf87a" font-family="Consolas, 'Courier New', monospace" font-size="16" letter-spacing="1">muhammed-salman-cc.is-a.dev</text>
 </svg>
