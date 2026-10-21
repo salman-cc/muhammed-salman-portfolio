@@ -17,7 +17,7 @@ export function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <a className="brand" href="#top" aria-label={`${portfolio.name} — back to top`}>
+            <a className="brand" href="#top" aria-label={`${portfolio.name}, back to top`}>
               <span className="brand-mark" aria-hidden="true">
                 MS
               </span>
@@ -25,7 +25,7 @@ export function Footer() {
                 <span className="brand-name">{portfolio.name}</span>
               </span>
             </a>
-            <p>Electronics student building intelligent systems from sensor to cloud.</p>
+            <p>Electronics student in Kerala. Embedded systems, FPGA design, and IoT.</p>
           </div>
 
           <nav className="footer-nav" aria-label="Footer">
@@ -67,7 +67,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {portfolio.name}
           </p>
-          <p className="footer-note">Designed &amp; built with React · TypeScript · Vite</p>
+          <p className="footer-note">Built with React, TypeScript, and Vite</p>
           <a href="#top">
             Back to top
             <ArrowUp size={13} aria-hidden="true" />

@@ -21,7 +21,7 @@ export function Hero() {
           <p className="hero-kicker intro intro-1">Hello, I’m {portfolio.preferredName}.</p>
 
           <h1 id="hero-title" className="intro intro-2">
-            Building smarter systems, <em>one circuit at a time.</em>
+            I build the circuits. <em>I write the firmware.</em>
           </h1>
 
           <p className="hero-copy intro intro-3">{portfolio.intro}</p>
@@ -103,10 +103,10 @@ export function Hero() {
           <span className="scroll-cue-icon" aria-hidden="true">
             <ArrowDown size={14} />
           </span>
-          Scroll to explore
+          Scroll for more
         </a>
         <p className="hero-note" aria-hidden="true">
-          // analog · digital · firmware · cloud
+          Analog · digital · firmware
         </p>
       </div>
     </section>

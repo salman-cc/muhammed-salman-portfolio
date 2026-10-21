@@ -11,8 +11,9 @@ type SmartImageProps = {
 }
 
 /**
- * Renders an image, and swaps to a designed placeholder if the asset fails to
- * load (offline visitors, blocked hosts, or a stale CDN link).
+ * Renders an image and swaps in the fallback if the file fails to load,
+ * which happens when a visitor is offline, a host is blocked, or a CDN
+ * link stops working.
  */
 export function SmartImage({
   src,

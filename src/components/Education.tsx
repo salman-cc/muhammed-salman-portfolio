@@ -11,8 +11,8 @@ export function Education() {
           id="education-title"
           index="05"
           label="Education"
-          title="A foundation in electronics."
-          lede="Formal training in analog, digital, and embedded systems — now focused on intelligent hardware and FPGA design."
+          title="Where I studied."
+          lede="Coursework in analog, digital, and embedded systems, now pointed at FPGA design."
         />
 
         <div className="education-grid">

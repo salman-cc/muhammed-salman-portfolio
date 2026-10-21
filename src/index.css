@@ -631,7 +631,11 @@ button {
   text-wrap: balance;
 }
 
-.hero h1 em,
+.hero h1 em {
+  color: var(--accent-text);
+  font-style: normal;
+}
+
 .contact h2 em {
   color: var(--accent-text);
   font-style: normal;
@@ -640,6 +644,8 @@ button {
   text-decoration-thickness: 2px;
   text-underline-offset: 0.12em;
   text-decoration-skip-ink: none;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .hero-copy {

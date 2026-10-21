@@ -18,12 +18,12 @@ export function Contact() {
             </p>
 
             <h2 id="contact-title">
-              Let’s engineer something <em>meaningful.</em>
+              Let’s build something <em>that works.</em>
             </h2>
 
             <p className="contact-lede">
-              Open to embedded systems opportunities, technical collaborations, and research conversations. The
-              fastest way to reach me is email — I usually reply within a day.
+              I’m open to embedded systems roles, collaborations, and research conversations. Email is the
+              fastest way to reach me, and I usually reply within a day.
             </p>
 
             <div className="contact-actions">

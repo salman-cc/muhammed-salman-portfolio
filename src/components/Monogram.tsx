@@ -3,7 +3,7 @@ type MonogramProps = {
   label: string
 }
 
-/** Designed stand-in used when the portrait image cannot be loaded. */
+/** Fallback shown when the portrait image cannot be loaded. */
 export function Monogram({ initials, label }: MonogramProps) {
   return (
     <div className="monogram">

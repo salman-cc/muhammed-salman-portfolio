@@ -17,8 +17,8 @@ export function Experience() {
           id="experience-title"
           index="04"
           label="Experience"
-          title="Learning through engineering."
-          lede="Internships, research seminars, and community work that keep the theory grounded in practice."
+          title="What I've done outside coursework."
+          lede="An internship, a research seminar, and a channel I started."
         />
 
         <ol className="timeline">

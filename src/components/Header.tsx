@@ -80,7 +80,7 @@ export function Header() {
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}${open ? ' is-open' : ''}`}>
       <div className="container header-inner">
-        <a className="brand" href="#top" aria-label={`${portfolio.name} — home`}>
+        <a className="brand" href="#top" aria-label={`${portfolio.name}, home`}>
           <span className="brand-mark" aria-hidden="true">
             MS
           </span>

@@ -30,8 +30,8 @@
 
   <!-- headline -->
   <text x="80" y="330" fill="#f0f5f1" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="600" letter-spacing="-2.6">Muhammed Salman CC</text>
-  <text x="80" y="404" fill="#a9b8b0" font-family="Arial, Helvetica, sans-serif" font-size="31" letter-spacing="-0.4">Electronics student building intelligent systems</text>
-  <text x="80" y="446" fill="#a9b8b0" font-family="Arial, Helvetica, sans-serif" font-size="31" letter-spacing="-0.4">from sensor to cloud.</text>
+  <text x="80" y="404" fill="#a9b8b0" font-family="Arial, Helvetica, sans-serif" font-size="31" letter-spacing="-0.4">Electronics student working on embedded</text>
+  <text x="80" y="446" fill="#a9b8b0" font-family="Arial, Helvetica, sans-serif" font-size="31" letter-spacing="-0.4">systems, FPGAs, and IoT.</text>
 
   <!-- tags -->
   <g font-family="Consolas, 'Courier New', monospace" font-size="17" fill="#c9f76f">

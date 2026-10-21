@@ -35,8 +35,8 @@ export function Projects() {
           id="projects-title"
           index="03"
           label="Selected work"
-          title="Systems built for the real world."
-          lede="Three builds spanning power electronics, connected metering, and wearable healthcare — each taken from circuit design to working firmware."
+          title="Projects that had to work outside the lab."
+          lede="A battery-saving inverter controller, a cloud-connected energy meter, and a wearable therapy jacket. Each one went from schematic to working firmware."
         />
 
         <div className="project-grid">

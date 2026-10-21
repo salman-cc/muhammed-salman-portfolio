@@ -41,7 +41,7 @@ describe('portfolio experience', () => {
       expect(container.querySelector(`#${id}`)).not.toBeNull()
     }
 
-    expect(screen.getByRole('heading', { level: 1 }).textContent).toMatch(/Building smarter systems/i)
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toMatch(/I build the circuits/i)
     expect(within(container).getByRole('navigation', { name: 'Primary' })).toBeTruthy()
   })
 

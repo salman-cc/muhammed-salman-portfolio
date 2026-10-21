@@ -1,8 +1,8 @@
 # Personal Portfolio
 
-A fast, responsive personal portfolio for **Muhammed Salman CC** — an M.Sc. Electronics student working across embedded systems, FPGA design, IoT, and intelligent hardware.
+A fast, responsive personal portfolio for **Muhammed Salman CC**, an M.Sc. Electronics student working on embedded systems, FPGA design, and IoT.
 
-Built with React, TypeScript, Vite, and Tailwind CSS. The visual direction is deliberately restrained: a dark, lawn-green engineering palette with a warm light mode, strong typography, fine grid textures, and motion that respects `prefers-reduced-motion`.
+Built with React, TypeScript, Vite, and Tailwind CSS. The site uses a dark green palette, a warm light mode, large display type, and a subtle grid texture. Motion is kept short and respects `prefers-reduced-motion`.
 
 Repository: https://github.com/ccsalman545/muhammed-salman-portfolio
 
@@ -10,27 +10,27 @@ Live site: https://muhammed-salman-cc.is-a.dev
 
 ## Features
 
-- **Two themes** — deep-green dark mode and a warm paper light mode. The choice is remembered in `localStorage` and applied before first paint, so there is no flash of the wrong theme.
-- **Sticky, responsive navigation** — scroll progress bar, section-aware active link, animated mobile sheet with focus trap, Escape-to-close, and body scroll locking.
-- **Hero with an engineering identity** — availability pill, oversized display headline, schematic linework, portrait frame with fallback monogram, and a "currently studying" card.
-- **At-a-glance highlights** — education, award, and community facts in a bordered strip, followed by a marquee of tools and topics.
-- **Editorial sections** — About with a sticky side rail and "currently exploring" note; a card-based technical stack; a featured project layout with fallback graphics when remote images are unavailable.
-- **Project and experience detail** — category labels, award badges, impact lists, and tag pills with a timeline for internships, research, and community work.
-- **Contact panel** — split layout with primary actions (email, LinkedIn, GitHub) plus a plain-text contact card, and one-click *Copy email* with a live-region confirmation.
-- **Robust image handling** — any portrait, logo, or project image that fails to load is replaced with a designed placeholder instead of a broken-image icon.
-- **Accessible by default** — skip link, semantic landmarks, labelled sections, visible focus rings, 4.5:1+ text contrast in both themes, forced-colors and print fallbacks, and axe-core checks in both unit tests and the browser.
-- **Fast and self-hosted** — variable fonts bundled through `@fontsource-variable` (Inter, Space Grotesk, JetBrains Mono), no tracking scripts, no external font requests.
-- **SEO ready** — Open Graph/Twitter metadata, refreshed 1200×630 social image, canonical URL, JSON-LD `Person` schema, sitemap, robots, and web manifest.
+- **Two themes.** Deep green dark mode and a warm paper light mode. The choice is saved in `localStorage` and applied before the first paint, so the page never flashes the wrong theme.
+- **Sticky navigation.** A reading progress bar, an active link that follows the section in view, and a mobile menu that closes on Escape.
+- **Hero.** An availability note, a large headline, schematic line art, and a portrait frame that falls back to a monogram if the image does not load.
+- **Highlights strip.** Education, award, and community facts in one row, followed by a short marquee of tools.
+- **Content sections.** About with a side note on current work, a card grid for the technical stack, and a featured project card plus two smaller cards.
+- **Experience and education.** A timeline for the internship, seminar, and community work, and one card per degree.
+- **Contact panel.** Email, LinkedIn, and GitHub buttons beside a plain-text contact card, with a one-click copy email action.
+- **Image fallbacks.** Portrait, logo, and project images that fail to load are replaced with built-in placeholders instead of broken image icons.
+- **Accessibility.** Skip link, semantic landmarks, labelled sections, visible focus rings, 4.5:1 or better text contrast in both themes, forced-colors and print styles, and axe-core checks in tests and in the browser.
+- **Self-hosted fonts.** Inter, Space Grotesk, and JetBrains Mono are bundled through `@fontsource-variable`. There are no tracking scripts and no external font requests.
+- **SEO.** Open Graph and Twitter metadata, a 1200x630 social image, canonical URL, JSON-LD `Person` data, sitemap, robots file, and web manifest.
 
 ## Stack
 
 - React 19
 - TypeScript
 - Vite 8
-- Tailwind CSS 4 (used as the import layer; the design system is hand-authored CSS variables)
+- Tailwind CSS 4 (import layer only, the design system is hand-written CSS variables)
 - Lucide React icons
 - `@fontsource-variable` fonts
-- Vitest + Testing Library + axe-core
+- Vitest, Testing Library, and axe-core
 
 ## Getting started
 
@@ -43,13 +43,13 @@ Open the local URL printed by Vite.
 
 ## Personalize
 
-Most content lives in [`src/data/portfolio.ts`](src/data/portfolio.ts): name, email, location, biography, focus areas, skills, projects, experience, education, and social links. The `satisfies` annotations there also give you editor autocomplete when adding entries.
+Most content lives in [`src/data/portfolio.ts`](src/data/portfolio.ts): name, email, location, biography, focus areas, skills, projects, experience, education, and social links. The `satisfies` annotations there also give you autocomplete when you add entries.
 
 Also review:
 
 1. Metadata, canonical URL, and JSON-LD in `index.html` if the production domain changes.
 2. The `MS` monogram in `src/components/Monogram.tsx` and `.brand-mark` if the initials change.
-3. Social preview artwork in `public/og-image.svg` (export `public/og-image.png` at 1200×630 to match).
+3. Social preview artwork in `public/og-image.svg`. Export `public/og-image.png` at 1200x630 to match.
 4. Theme tokens in `src/index.css` under `:root` (dark) and `[data-theme='light']` (light).
 
 ## Project structure
@@ -93,13 +93,13 @@ portfolio/
 npm run dev       # Start the development server
 npm run build     # Type-check and create a production build
 npm run lint      # Run Oxlint
-npm run test:a11y # Run axe accessibility + interaction tests
+npm run test:a11y # Run axe accessibility and interaction tests
 npm run preview   # Preview the production build locally
 ```
 
 ## Deploy to Netlify
 
-Push this repository to a Git provider and import it in Netlify. The included `netlify.toml` configures the build command, publish directory, SPA redirects, caching, and security headers automatically.
+Push this repository to a Git provider and import it in Netlify. The included `netlify.toml` sets the build command, publish directory, SPA redirect, caching, and security headers.
 
 Alternatively, use the Netlify CLI:
 
@@ -111,4 +111,4 @@ netlify deploy --build --prod
 
 ## Accessibility
 
-The project includes a skip link, labelled landmarks and sections, keyboard-visible focus styling, a focus-trapped mobile menu with Escape support, `aria-current` navigation state, a polite live region for the copy-email action, reduced-motion fallbacks, forced-colors support, and print styles. `npm run test:a11y` runs axe-core against the rendered app plus a few interaction checks. Because jsdom cannot calculate rendered color contrast, validate major visual changes in a browser with Lighthouse or axe DevTools and a keyboard pass in both themes.
+The site includes a skip link, labelled landmarks and sections, visible focus styles, a mobile menu that keeps focus inside while open and closes on Escape, `aria-current` navigation state, a polite live region for the copy email action, reduced-motion handling, forced-colors support, and print styles. `npm run test:a11y` runs axe-core against the rendered app and checks the theme toggle and mobile menu. jsdom cannot calculate rendered color contrast, so check major visual changes in a browser with Lighthouse or axe DevTools and a keyboard pass in both themes.

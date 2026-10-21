@@ -45,16 +45,16 @@ export const portfolio = {
   phone: '+91 9746707833',
   availability: 'Open to embedded systems opportunities',
   intro:
-    'I design intelligent electronic systems where hardware, firmware, and connected technology work together.',
+    'I work on both sides of a project: sensor front ends, power switching, and the firmware that runs them.',
   profileImage: 'https://i.postimg.cc/k4NKMqzp/file-00000000b38c71f5be0b8b69186cc8e1.png',
   about: [
     'I’m Salman, an M.Sc. Electronics student at Cochin University of Science and Technology, focused on embedded systems, FPGA design, robotics, IoT, and Embedded Linux.',
-    'I enjoy taking ideas from circuit architecture to working firmware—interfacing sensors, controlling power electronics, and building connected systems that solve practical engineering problems.',
-    'My goal is to become an Embedded Systems Engineer specializing in intelligent hardware, Edge AI, FPGA-based systems, and open-source technologies.',
+    'I like taking an idea from circuit architecture to working firmware: interfacing sensors, controlling power electronics, and building systems that solve a practical problem.',
+    'I want to work as an embedded systems engineer, with a focus on Edge AI, FPGA-based systems, and open-source tools.',
   ],
   currentlyExploring: {
     label: 'Currently exploring',
-    body: 'FPGA-based vision pipelines for autonomous robots, and running lightweight inference at the edge.',
+    body: 'How vision pipelines are built on FPGAs for autonomous robots, and how small models run on edge devices.',
     tags: ['Verilog', 'Vivado', 'Edge AI'],
   },
   focusAreas: [
@@ -73,7 +73,7 @@ export const portfolio = {
       icon: 'graduation',
     },
     {
-      label: 'Recognition',
+      label: 'Award',
       value: 'District-level YIP Winner',
       meta: 'Auto hibernate for inverters',
       icon: 'award',
@@ -145,11 +145,11 @@ export const portfolio = {
       label: 'Embedded Systems',
       badge: 'District-level YIP Winner',
       description:
-        'An intelligent inverter battery-management system that disconnects lower-priority AC loads according to battery voltage, extending backup time and protecting batteries from deep discharge.',
+        'An inverter controller that reads battery voltage and sheds lower-priority AC loads before the battery drains. Backup time goes up and deep discharge is avoided.',
       impact: [
-        'Designed the complete hardware and control architecture',
+        'Designed the hardware and control architecture',
         'Built priority-based load logic with configurable thresholds',
-        'Implemented real-time voltage, current, and LCD monitoring',
+        'Added live voltage, current, and LCD readouts',
       ],
       tags: ['Arduino Nano', 'Embedded C', 'ZMPT101B', 'ACS712', 'Relay', '16×2 LCD'],
       image: 'https://i.postimg.cc/mZ6B2DFh/file-00000000bda0722fb460db042afe0207.png',
@@ -158,7 +158,7 @@ export const portfolio = {
       title: 'Smart IoT Energy Meter',
       label: 'Internet of Things',
       description:
-        'A connected energy-monitoring system for remotely tracking electrical usage through cloud dashboards.',
+        'An energy meter that sends voltage and current readings to cloud dashboards, so usage can be checked remotely.',
       impact: [
         'Voltage and current sensing',
         'Remote dashboards with Blynk and ThingSpeak',
@@ -170,11 +170,11 @@ export const portfolio = {
       title: 'Smart TENS Jacket',
       label: 'Healthcare IoT',
       description:
-        'An IoT-enabled wearable integrating TENS therapy with physiological monitoring and GSM communication.',
+        'A wearable that combines TENS therapy with heart-rate monitoring and GSM alerts for the wearer.',
       impact: [
         'Wearable therapeutic electronics',
         'Heart-rate and motion monitoring',
-        'GSM-based alerts and communication',
+        'GSM alerts and messaging',
       ],
       tags: ['Arduino Micro', 'SIM800', 'Heart Rate Sensor', 'Accelerometer', 'TENS'],
     },
@@ -185,7 +185,7 @@ export const portfolio = {
       title: 'IoT Intern',
       org: 'Sparkiit',
       description:
-        'Hands-on development with ESP32, NodeMCU, embedded programming, sensor interfacing, and IoT communication.',
+        'Worked with ESP32 and NodeMCU boards, wrote firmware, and connected sensors to IoT services.',
       tags: ['ESP32', 'NodeMCU', 'Sensor Interfacing', 'IoT'],
       kind: 'work',
     },
@@ -194,7 +194,7 @@ export const portfolio = {
       title: 'FPGA-Based Vision Processing',
       org: 'For Autonomous Robots',
       description:
-        'Exploring FPGA architecture, computer vision, robotics, hardware acceleration, and autonomous systems.',
+        'Seminar on FPGA architecture and vision processing for autonomous robots, including where hardware acceleration helps.',
       tags: ['Verilog', 'FPGA', 'Computer Vision', 'Robotics'],
       kind: 'research',
     },
@@ -203,7 +203,7 @@ export const portfolio = {
       title: 'Content Creator',
       org: 'AiCoN Tech Hub',
       description:
-        'Creating accessible educational content about AI, Linux, programming, cybersecurity, open source, and developer tools.',
+        'I make educational videos and posts about AI, Linux, programming, cybersecurity, and open-source tools.',
       tags: ['AI', 'Linux', 'Open Source', 'Education'],
       kind: 'community',
     },

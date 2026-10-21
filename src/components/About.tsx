@@ -7,7 +7,7 @@ export function About() {
     <section id="about" className="section" aria-labelledby="about-title">
       <div className="container split">
         <div className="about-aside">
-          <SectionHeading id="about-title" index="01" label="Profile" title="Electronics first. Always curious." />
+          <SectionHeading id="about-title" index="01" label="Profile" title="Electronics student at CUSAT." />
           <aside className="explore-card reveal" aria-label="Currently exploring">
             <div className="explore-head">
               <Telescope size={15} aria-hidden="true" />

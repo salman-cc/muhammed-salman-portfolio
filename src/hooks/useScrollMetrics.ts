@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 /**
  * Small header helper: becomes true once the page is scrolled and exposes
- * reading progress as a 0–1 value for the top progress bar.
+ * reading progress as a value between 0 and 1 for the top progress bar.
  */
 export function useScrollMetrics() {
   const [scrolled, setScrolled] = useState(false)

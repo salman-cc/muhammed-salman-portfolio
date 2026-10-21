@@ -13,8 +13,8 @@ export function Skills() {
           id="skills-title"
           index="02"
           label="Technical stack"
-          title="Hardware-minded, software-capable."
-          lede="From firmware and RTL to PCB layout and connected dashboards — a toolkit that crosses the hardware/software boundary."
+          title="The tools I work with."
+          lede="Firmware, RTL, PCB layout, and dashboards. I work on both the hardware and software sides of a project."
         />
 
         <div className="skills-grid">
