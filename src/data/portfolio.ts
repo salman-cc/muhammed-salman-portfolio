@@ -225,7 +225,7 @@ export const portfolio = {
   ] satisfies Education[],
   links: {
     portfolio: 'https://muhammed-salman-cc.is-a.dev',
-    github: 'https://github.com/ccsalman545',
+    github: 'https://github.com/salman-cc',
     linkedin: 'https://www.linkedin.com/in/muhammed-salman-cc-b7522433b',
   },
 }
