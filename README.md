@@ -4,7 +4,7 @@ A fast, responsive personal portfolio for **Muhammed Salman CC**, an M.Sc. Elect
 
 Built with React, TypeScript, Vite, and Tailwind CSS. The site uses a dark green palette, a warm light mode, large display type, and a subtle grid texture. Motion is kept short and respects `prefers-reduced-motion`.
 
-Repository: https://github.com/ccsalman545/muhammed-salman-portfolio
+Repository: https://github.com/salman-cc/muhammed-salman-portfolio
 
 Live site: https://muhammed-salman-cc.is-a.dev
 
